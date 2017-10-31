@@ -1,0 +1,15 @@
+<!-- <p>
+  login works!
+</p>
+ -->
+
+ <h4>{{ loginMsg }}</h4>
+<form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+  <div class="input-container">
+    
+      <input  type="text" placeholder="Username" name="username" ngModel required>
+
+      <input  type="password" placeholder="Password" name="password" ngModel required>
+  </div>
+  <app-two-button [button1Text]="'login'" [button2Text]="'Forget Password'"></app-two-button>
+</form>

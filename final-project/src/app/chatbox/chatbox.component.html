@@ -1,0 +1,23 @@
+<!-- <p>
+  chatbox works!
+</p> -->
+
+<div class="open-chat-box-btn" *ngIf="chatBoxIsClosed">
+	<button  type="button" color="primary" (click)="openChatBox()">Open Chat Box</button>
+</div>
+<div class="container" *ngIf="!chatBoxIsClosed">
+  <button  color="primary" class="close-chat-box-btn" (click)="closeChatBox()">&#10006;</button>
+  <div class="chat-container">
+    <p *ngFor="let chatMessage of chat">
+      <span class="chat-from">{{ chatMessage.from }}</span>
+      <span class="chat-message">{{ chatMessage.message }}</span>
+    </p>
+  </div>
+  <div class="new-message-container">
+    <hr>
+    
+      <input  type="text" placeholder="New message">
+   
+    <button type="button" color="primary">Send</button>
+  </div>
+</div>
