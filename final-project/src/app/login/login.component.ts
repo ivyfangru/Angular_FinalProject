@@ -21,12 +21,12 @@ export class LoginComponent implements OnInit {
     if (user[0]) {
       if (user[0].password === loginForm.value.password) {
         this.currentUser = user[0];
-        this.loginMsg = `Success! Logged in as ${this.currentUser.firstName} ${this.currentUser.lastName}.`
+        this.loginMsg = `Logged in Successed! ${this.currentUser.firstName} ${this.currentUser.lastName}.`
       } else {
-        this.loginMsg = 'Invalid login. Please try again';
+        this.loginMsg = 'Invalid login.';
       }
     } else {
-      this.loginMsg = 'Invalid login. Please try again';
+      this.loginMsg = 'Invalid login.';
     }
   }
 

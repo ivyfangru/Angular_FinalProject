@@ -10,14 +10,14 @@
   <div class="chat-container">
     <p *ngFor="let chatMessage of chat">
       <span class="chat-from">{{ chatMessage.from }}</span>
-      <span class="chat-message">{{ chatMessage.message }}</span>
+      <span class="bubble">{{ chatMessage.message }}</span>
     </p>
   </div>
   <div class="new-message-container">
     <hr>
     
-      <input  type="text" placeholder="New message">
+      <input  type="text" class="newMsg" placeholder="New message">
    
-    <button type="button" color="primary">Send</button>
+    <button type="button" class="snd" >Send</button>
   </div>
 </div>
